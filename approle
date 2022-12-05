@@ -30,3 +30,5 @@ secret_id               6a174c20-f6de-a53c-74d2-6018fcceff64
 secret_id_accessor      c454f7e5-996e-7230-6074-6ef26b7bcf86
 secret_id_ttl           10m
 secret_id_num_uses      40
+
+vault read auth/approle/role/my-role (these will show full details of the role)
