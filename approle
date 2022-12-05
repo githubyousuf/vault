@@ -8,8 +8,14 @@ vault write auth/approle/role/my-role \
     secret_id_num_uses=40
  
 (create policy in ui or cli)
+path "secrets/*"
+{
+  capabilities= ["read","create","delete"]
+}
 
-vault write auth/approle/my-role token_policies="jenkins-role-policy"    ///(attaching policy to my-role)
+
+
+vault write auth/approle/role/my-role token_policies="jenkins-policy"    ///(attaching policy to my-role)
 
 #Fetch the RoleID of the AppRole:
 
