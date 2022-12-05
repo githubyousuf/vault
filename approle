@@ -6,6 +6,8 @@ vault write auth/approle/role/my-role \
     token_ttl=20m \
     token_max_ttl=30m \
     secret_id_num_uses=40
+ 
+(create policy in ui or cli)
 
 vault write auth/approle/my-role token_policies="jenkins-role-policy"    ///(attaching policy to my-role)
 
